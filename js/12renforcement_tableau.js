@@ -152,3 +152,50 @@ var Apprenants = [
         },
     ];
     console.log(Apprenants);
+
+    var nombreDetudiants = Apprenants.length;
+    for(let i = 0; i > nombreDetudiants; i++) {
+        console.log('Ici, i = ' + i);
+        // console.log(Apprenants[i]);
+        console.log(Apprenants[i].nomcomplet + ' : ' + Apprenants[i].classe);
+        console.log('-----');
+    }
+
+    /*-----------------------------------------------
+                    AJOUTER UN ÉLÉMENT
+    ------------------------------------------------- */
+
+    var Couleurs = ['Rouge', 'Jaune', 'Vert'];
+    /**
+     * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push
+     * 
+     * Si je souhaite ajouter un élément dans mon tableau. Je fais appel à la fonction PUSH() qui  me renvoie le nombre d'éléments
+     */
+
+    console.clear();  // permet de nettoyer la console
+    console.log(Couleurs);
+    console.log(Couleurs.length);
+
+    var nbElementsDeMonTableau = Couleurs.push('Bleu');
+
+    console.log(Couleurs);
+
+/*-----------------------------------------------
+               FONCTION UNSHIFT
+------------------------------------------------- */
+
+/**
+ * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/unshift
+ * 
+ * La fonction unshift() permet d'ajouter un ou plusieurs éléments au début de mon tableau et d'en récupérer la valeur. Je peux accessoirement récupérer cette valeur dans une variable
+ */
+
+/*-----------------------------------------------
+              FONCTION POP
+------------------------------------------------- */
+
+/**
+ * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/pop
+ * 
+ * La fonction POP() me permet de supprimer un ou plusieurs éléments de mon tableau et d'en récupérer. Je peux accessoirement récupérer cette valeur dans une variable
+ */
