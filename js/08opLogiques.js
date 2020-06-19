@@ -31,7 +31,7 @@ if ((C) || (D)) {..........}
 
 var utilisateurLog = true;
 if(!utilisateurLog) {
-    // si l'utilisateur n'st pas connecté/ loggé
+    // si l'utilisateur n'est pas connecté/ loggé
 }
 // ce qui revient à écrire:
 if(utilisateur == false) {

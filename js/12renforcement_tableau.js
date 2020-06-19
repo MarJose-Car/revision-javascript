@@ -199,3 +199,22 @@ var Apprenants = [
  * 
  * La fonction POP() me permet de supprimer un ou plusieurs éléments de mon tableau et d'en récupérer. Je peux accessoirement récupérer cette valeur dans une variable
  */
+var popped = Couleurs.pop();
+
+console.log(Couleurs);  // Affiche 'Rouge', 'Jaune', 'Vert'
+console.log(popped);    // Affiche 'Bleu'
+
+/**
+ * La même chose est possible avec le premier élément en utilisant la fonction SHIFT().
+ * -----
+ * La fonction SPLICE() permet de sortir un ou plusieurs éléments de votre tableau. On peut ainsi vider ou remplacer une partie du tableau.
+ */
+
+Couleurs.splice(1, 0, "Noir"); 
+console.log(Couleurs);
+
+// Ici le premier élément correspond à l'indice à partir duquel je vais commencer à changer mon tableau (le premier indice d'un tableau commence toujours par '0')
+
+// Le deuxième indice correspond au nombre d'anciens éléments à remplacer. Si cet paramètre est absent alors les anciens éléments ne seront pas supprimés.
+
+// Et le dernier élémznt correspond à l'élément ou les éléments à ajouter au tableau à partir du premier indice.
