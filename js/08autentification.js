@@ -1,3 +1,4 @@
+alert();
 /* -- A partir du tableau fourni, vous devez mettre un place un système d'authentification.
 Après avoir demandé à votre utilisateur son email et mot de passe, et après avoir vérifié ses informations, vous lui souhaiterez la bienvenue avec son nom et son prémon (document.write):
 
