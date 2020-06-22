@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(235, 232, 232);
+}
+.container {
+    margin: 20px;
+}
+h1 {
+    text-align: center;
+}
+input {
+    display: block;
+    margin-left: 30px;
+    
+}
+.number, .date {
+   display: flex;
+   justify-content: end;
+   margin-left: 70px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+table {
+    background: gray;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto
+    
+}
+td {
+    border: 2px solid  #000;
+}
+th {
+    padding: 20px;
+    text-align: center;
+}
+.remise {
+    background: grey;
+    height: 100px;
+    margin-top: 20px;
+}
+h5 {
+    background: red; 
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}

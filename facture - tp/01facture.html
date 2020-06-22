@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exo Facture TP </title>
+    <link rel="stylesheet" href="01facture.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>FACTURE</h1>
+        <form>
+            <input type="text" name="nom" id="nom" placeholder="Nom de la Société émetrice">
+
+            <input type="text" name="adresse" id="adresse" placeholder="Adresse de la Sociéte">
+
+            <input type="text" name="telephone" id="telephone" placeholder="Entrez un numéro de téléphone valide">
+            
+            <input type="email" name="email" id="email" placeholder="Adresse de messagerie">
+        </form>
+        <div class="number">
+            <h4>N° DE FACTURE<input type="number" name="number" id="number" placeholder="N°"></h4>
+        </div>
+        <div class="date">
+            <h4>DATE<input type="date" name="date" id="date" placeholder="date"></h4>
+        </div>
+
+        <div class="row">
+            <div>
+                <h4>À:</h4>
+                <form>
+                    <input type="text" name="new" id="new" placeholder="NOUVEAU CLIENT">
+                    <input type="text" name="nom" id="nom" placeholder="Nom de la Société ">
+                
+                    <input type="text" name="adresse" id="adresse" placeholder="Nom">
+
+                    <input type="text" name="rue" id="rue" placeholder="Rue">
+
+                    <input type="text" name="code_postal" id="code_postal" placeholder="Code Postal, Vile">
+                
+                    <input type="text" name="telephone" id="telephone" placeholder="Numéro de Téléphone">
+                </form>
+            </div>
+            <div>
+                <h4>À EXPÉDIER:</h4>
+                <form>
+                    <input type="text" name="new" id="new" placeholder="NOUVEAU CLIENT">
+                    <input type="text" name="nom" id="nom" placeholder="Nom de la Société ">
+                    
+                    <input type="text" name="adresse" id="adresse" placeholder="Nom">
+                    
+                    <input type="text" name="rue" id="rue" placeholder="Rue">
+                    
+                    <input type="text" name="code_postal" id="code_postal" placeholder="Code Postal, Vile">
+                    
+                    <input type="text" name="telephone" id="telephone" placeholder="Numéro de Téléphone">
+                </form>
+            </div>
+        </div>
+        <table>
+            <caption>
+                <h2>Détails des produits facturés</h2>
+            </caption>
+            ​
+            <thead>
+                <tr>
+                    <th>Code produit</th>
+                    <th>Libellé produit</th>
+                    <th>Prix - Unitaire en euros</th>
+                    <th>Quantité commandée</th>
+                    <th>Montant en euros</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td><select id="list_0" class="selects">
+                            <option value="0" selected></option> <!-- On attribut une valeur à chaque choix de la liste !-->
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                        </select>
+                    </td>
+        
+                    <td id="produit_0" class="basique">
+                        <!-- On donne un nom aux cases pour le css !-->
+        
+                    </td>
+        
+                    <td id="prixUnitaire_0" class="basique">
+        
+                    </td>
+                    <td>
+        
+                        <input id="quantite_0" type="text" onkeyup="calcule(0); error(0)" class="cent selects" placeholder="0"
+                            maxlength="2" />
+        
+                    </td>
+        
+                    <td id="afficherMontant_0" class="basique cent">
+        
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <select id="list_1" class="selects">
+                            <option value="0" selected></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                        </select>
+                    </td>
+                    <td id="produit_1" class="basique">
+        
+                    </td>
+                    <td id="prixUnitaire_1" class="basique">
+        
+                    </td>
+                    <td>
+        
+                        <input id="quantite_1" type="text" class="cent selects" onkeyup="calcule(1); error(1)" placeholder="0"
+                            maxlength="2" />
+        
+                    </td>
+        
+                    <td id="afficherMontant_1" class="basique cent">
+        
+                    </td>
+                </tr>
+                ​
+                <tr>
+                    <td>
+                        <select id="list_2" class="selects">
+                            <option value="0" selected></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                        </select>
+                    </td>
+                    <td id="produit_2" class="basique">
+        
+                    </td>
+                    <td id="prixUnitaire_2" class="basique">
+        
+                    </td>
+                    <td>
+        
+                        <input id="quantite_2" type="text" class="cent selects" onkeyup="calcule(2); error(2)" placeholder="0"
+                            maxlength="2" />
+        
+                    </td>
+        
+                    <td id="afficherMontant_2" class="basique cent">
+        
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <select id="list_3" class="selects">
+                            <option value="0" selected></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                        </select>
+                    </td>
+                    <td id="produit_3" class="basique">
+        
+                    </td>
+                    <td id="prixUnitaire_3" class="basique">
+        
+                    </td>
+                    <td>
+        
+                        <input id="quantite_3" type="text" class="selects cent" onkeyup="calcule(3); error(3)" placeholder="0"
+                            maxlength="2" />
+        
+                    </td>
+        
+                    <td id="afficherMontant_3" class="basique cent">
+        
+                    </td>
+                </tr>
+        
+            </tbody>
+        
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="no_border"></br></br></br></td>
+                    <td>
+                        <p>
+        
+                            <span id="error" style="display:none">Veuillez entrer un nombre</span>
+                            <!--Si l'utilisateur entre une lettre, un message apparait lui demandant d'entre un chiffre !-->
+        
+                    </td>
+                    <td class="no_border"></td>
+                </tr>
+        
+        
+                <td class="no_border"></td>
+        
+        
+                </tr>
+        
+                <div id="bilan">
+                    <tr>
+                        <td colspan="4" id="border_top_right">SOUS-TOTAL</td>
+                        <td id="sous_total" class="bord_tableau"></td>
+                    </tr>
+        
+                    <tr>
+                        <td colspan="4">T.V.A. 20,00%</td>
+                        <td id="tva" class="bord_tableau"></td>
+                    </tr>
+        
+                    <tr>
+                        <td colspan="4">PORT & MANUTENTION</td>
+                        <td id="port_manutention" class="bord_tableau"></td>
+                    </tr>
+        
+                    <tr>
+                        <td colspan="4">TOTAL DU (TOTAL TTC)</td>
+                        <td id="total" class="bord_tableau"></td>
+                    </tr>
+        
+                    ​
+                    <tr colspan="5">
+                        <td class="no_border"></br></br></td>
+                    </tr>        
+                </div>  
+            </tfoot>
+        </table>
+        <div class="remise">
+        <h5>N.B. Votre facture a dépassé 1000€, vous aves obtenu pour votre prochaine facture une remise de : 140,4€ représentant 5%  de votre commande ci-dessus</h5>
+        </div>
+    </div>
+    <script type="text/javascript" src="01facture.js"></script>
+
+</body>
+
+</html>
