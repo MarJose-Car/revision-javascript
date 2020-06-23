@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1>FACTURE</h1>
+        <div class="societe">
         <form>
             <input type="text" name="nom" id="nom" placeholder="Nom de la Société émetrice">
 
@@ -21,50 +22,44 @@
             
             <input type="email" name="email" id="email" placeholder="Adresse de messagerie">
         </form>
+        </div>
         <div class="number">
-            <h4>N° DE FACTURE<input type="number" name="number" id="number" placeholder="N°"></h4>
+            <h4>N° DE FACTURE</h4>
+            <input type="number" name="number" id="number" placeholder="N°">
         </div>
         <div class="date">
-            <h4>DATE<input type="date" name="date" id="date" placeholder="date"></h4>
+            <h4>DATE</h4>
+            <input type="date" name="date" id="date" placeholder="date">
         </div>
 
-        <div class="row">
+        <div class="row"  id="societe">
             <div>
                 <h4>À:</h4>
-                <form>
-                    <input type="text" name="new" id="new" placeholder="NOUVEAU CLIENT">
-                    <input type="text" name="nom" id="nom" placeholder="Nom de la Société ">
-                
-                    <input type="text" name="adresse" id="adresse" placeholder="Nom">
 
-                    <input type="text" name="rue" id="rue" placeholder="Rue">
-
-                    <input type="text" name="code_postal" id="code_postal" placeholder="Code Postal, Vile">
-                
-                    <input type="text" name="telephone" id="telephone" placeholder="Numéro de Téléphone">
-                </form>
+                <select class="options">
+                    <option id="nomSo" value="0" selected>nouveau client</option>
+                    <input value="1" type="text" name="nom" id="nom" placeholder="Nom de la société">
+                    <input value="2" type="text" name="rue" id="rue" placeholder="Rue">
+                    <input value="3" type="text" name="ville" id="ville" placeholder="Code Postal, Ville">
+                    <input value="4" type="text" name="telephonz" id="telephonz" placeholder="telephone">
+                </select>
             </div>
             <div>
                 <h4>À EXPÉDIER:</h4>
-                <form>
-                    <input type="text" name="new" id="new" placeholder="NOUVEAU CLIENT">
-                    <input type="text" name="nom" id="nom" placeholder="Nom de la Société ">
-                    
-                    <input type="text" name="adresse" id="adresse" placeholder="Nom">
-                    
-                    <input type="text" name="rue" id="rue" placeholder="Rue">
-                    
-                    <input type="text" name="code_postal" id="code_postal" placeholder="Code Postal, Vile">
-                    
-                    <input type="text" name="telephone" id="telephone" placeholder="Numéro de Téléphone">
-                </form>
+                <select class="options">
+                    <option id="nomSo" value="0" selected>nouveau client</option>
+                    <input value="1" type="text" name="nom" id="nom" placeholder="Nom de la société">
+                    <input value="2" type="text" name="rue" id="rue" placeholder="Rue">
+                    <input value="3" type="text" name="ville" id="ville" placeholder="Code Postal, Ville">
+                    <input value="4" type="text" name="telephonz" id="telephonz" placeholder="telephone">
+                </select>
             </div>
         </div>
         <table>
             <caption>
                 <h2>Détails des produits facturés</h2>
             </caption>
-            ​
+        
             <thead>
                 <tr>
                     <th>Code produit</th>
@@ -133,7 +128,7 @@
         
                     </td>
                 </tr>
-                ​
+        
                 <tr>
                     <td>
                         <select id="list_2" class="selects">
@@ -203,9 +198,9 @@
         
                     </td>
                     <td class="no_border"></td>
-                </tr>
+                
         
-        
+                </td>
                 <td class="no_border"></td>
         
         
@@ -232,15 +227,36 @@
                         <td id="total" class="bord_tableau"></td>
                     </tr>
         
-                    ​
+        
                     <tr colspan="5">
                         <td class="no_border"></br></br></td>
-                    </tr>        
-                </div>  
+                    </tr>
+        
+                </div>
+        
             </tfoot>
+        
         </table>
         <div class="remise">
-        <h5>N.B. Votre facture a dépassé 1000€, vous aves obtenu pour votre prochaine facture une remise de : 140,4€ représentant 5%  de votre commande ci-dessus</h5>
+            <h5>N.B. Votre facture a dépassé 1000€, vous aves obtenu pour votre prochaine facture une remise de : 140,4€ représentant 5%  de votre commande ci-dessus</h5>
+        </div>
+        <div class="fin">
+            <div class="cheque">
+                <h6>Veuillez redigez tous les cheques à l'ordre de </h6>
+                <input type="texte" nom="cheque" id="cheque" placeholder="Nom de l'entreprise">
+            </div>
+            <div class="contact">
+                <h6>Pour toute question concernant cette facture veuillez contactez DUPOND au</h6> 
+                <input type="texte" nom="contact" id="contact" placeholder="N° de téléphone">
+            
+            
+                <h6>ou à l'adresse</h6>
+                <input type="texte" nom="contactmail" id="contactmail" placeholder="Adresse Email">
+            </div>
+            <div class="merci">
+                <h6>Nous vous remercions de votre confiance</h6>  
+            </div>
+            <button type="submit">Imprimer cette facture</button>
         </div>
     </div>
     <script type="text/javascript" src="01facture.js"></script>
