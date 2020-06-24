@@ -1,0 +1,218 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exo Facture TP </title>
+    <link rel="stylesheet" href="facture_correction.css">
+</head>
+
+
+<body>
+
+
+    <div id="block_page">
+
+        <form method="post">
+            <header><h1>Facture</h1></header>
+            <section>
+                <p>
+                    <input type="text" class="caracBase"><br>
+                    <input type="text" class="caracBase"><br>
+                    <input type="text" class="caracBase"><br>
+                    <input type="text" class="caracBase"><br>
+                </p>
+                <p class="align_droite">
+                    N° de Facture<input type="number">
+                    Date : <span id="date"></span><br>
+                </p>
+            </section>
+            <section>
+                <aside>
+                    <h3>À :</h3><br />
+                    <select class="client" id="societe">
+                        <option value="0" selected></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                    </select><br />
+                    <input type="text" id="nomSo" class="caracBase"><br>
+                    <input type="text" id="nom" class="caracBase"><br>
+                    <input type="text" id="rue" class="caracBase"><br>
+                    <input type="text" id="ville" class="caracBase"><br>
+                    <input type="text" id="telephone" class="caracBase"><br>
+                </aside>
+                <aside class="centrer">
+                    <h3>EXPÉDIER À :</h3><br />
+                    <select class="client" id="customer">
+                        <option value="0" selected></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                    </select><br />
+                    <input type="text" id="nomSoC" class="caracBase"><br>
+                    <input type="text" id="nomC" class="caracBase"><br>
+                    <input type="text" id="rueC" class="caracBase"><br>
+                    <input type="text" id="villeC" class="caracBase"><br>
+                    <input type="text" id="telephoneC" class="caracBase"><br>
+                </aside>
+            </section>
+            <section>
+                <br><br>
+                <table>
+                    <caption><h2>Détails des produits facturés</h2></caption>
+                    <thead>
+                        <tr>
+                            <th>Code Produit</th>
+                            <th>Libellé produit</th>
+                            <th>Prix unitaire en €</th>
+                            <th>Quantité commande</th>
+                            <th>Montant en €</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="list_0" class="selects">
+                                    <option value="0" selected></option>
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                </select>
+                            </td>
+                            <td id="produit_0" class="basique">
+
+                            </td>
+                            <td id="prixUnitaire_0" class="basique">
+                            
+                            </td>
+                            <td>
+                                <input id="quantite_0" type="text" class="cent selects">
+                            </td>
+                            <td id="afficherMontant_0" class="basique cent"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="list_1" class="selects">
+                                    <option value="0" selected></option>
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                </select>
+                            </td>
+                            <td id="produit_1" class="basique">
+                        
+                            </td>
+                            <td id="prixUnitaire_1" class="basique">
+                        
+                            </td>
+                            <td>
+                                <input id="quantite_1" type="text" class="cent selects">
+                            </td>
+                            <td id="afficherMontant_1" class="basique cent"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="list_2" class="selects">
+                                    <option value="0" selected></option>
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                </select>
+                            </td>
+                            <td id="produit_2" class="basique">
+                        
+                            </td>
+                            <td id="prixUnitaire_2" class="basique">
+                        
+                            </td>
+                            <td>
+                                <input id="quantite_2" type="text" class="cent selects">
+                            </td>
+                            <td id="afficherMontant_2" class="basique cent"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="list_3" class="selects">
+                                    <option value="0" selected></option>
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                </select>
+                            </td>
+                            <td id="produit_3" class="basique">
+                        
+                            </td>
+                            <td id="prixUnitaire_3" class="basique">
+                        
+                            </td>
+                            <td>
+                                <input id="quantite_3" type="text" class="cent selects">
+                            </td>
+                            <td id="afficherMontant_3" class="basique cent"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="no-border">
+                                <br><br><br>
+                            </td>
+                            <td>
+                                <p><span id="error" style="display:none;">Veuillez entrez un nombre</span></p>
+                            </td>
+                            <td class="no_border"></td>
+                        </tr>
+                        <td class="no_border"></td>
+                        <div id="bilan">
+                            <tr>
+                                <td colspan="4" id="border_top_right">SOUS-TOTAL</td>
+                                <td id="sous_total" class="bord_tableau"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">T.V.A. 20,00%</td>
+                                <td id="tva" class="bord_tableau"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">PORT & MANUTENTION</td>
+                                <td id="port_manutention" class="bord_tableau"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">TOTAL DU (TOTAL TTC)</td>
+                                <td id="total" class="bord_tableau"></td>
+                            </tr>
+                            <tr colspan="5">
+                                <td class="no_border">
+                                    <br><br>
+                                </td>
+                            </tr>
+                        </div>
+                    </tfoot>
+                </table>
+                <p id="remiseBox" style="display:none;">N.B. Votre facture a dépassé 1000€, vous avez obtenu pour votre prochaine facture une remise de: <span id="remise">€ représentant % de votre commande ci dessus</p>
+                <div id="contact">
+                    <p>Veuillez rédiger tous les chèques à l'ordre de 
+                        <input type="text" id="contactSoNom" class="grise" disabled> <!-- Lorsque l'attribut disable est présent, il spécifie que l'élément <input> doit être désactivé--><br>
+                        Pour toute question concernant cette facture, veuillez contacter : DUPOND au
+                        <input type="text" id="contactNumTel" class="grise" placeholder="N° de téléphone" disabled> ou à l'adresse suivant
+                        <input type="text" id="contactAdMail" class="grise" placeholder="Adresse mail" disabled>
+                    </p>
+                    <h4>Nous vous remercions de votre confiance</h4>
+                </div>
+                <input type="button" id="impression" name="inpression" value="Imprimer la facture" onclick="imprimer_page()">
+            </section>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="facture_correction.js"></script>
+
+</body>
+
+</html>
